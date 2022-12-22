@@ -38,7 +38,7 @@ export function HomeContent() {
     <>
       <Card p="xl" className={classes.card}>
         <Grid>
-          <Grid.Col span={3}>
+          <Grid.Col sm={12} lg={3}>
             <Paper>
               <Avatar
                 size={120}
@@ -64,7 +64,7 @@ export function HomeContent() {
               </Button>
             </Paper>
           </Grid.Col>
-          <Grid.Col span={9}>
+          <Grid.Col sm={12} lg={9}>
             {loading || (error && <Loader />)}
             {!loading && <ReactMarkdown>{readme as string}</ReactMarkdown>}
           </Grid.Col>
