@@ -1,6 +1,6 @@
 import React from 'react';
 import { AppShell, Container } from '@mantine/core';
-import { AppHeader } from './AppHeader';
+import AppHeader from './AppHeader';
 import Head from 'next/head';
 
 type Props = {
@@ -10,7 +10,7 @@ type Props = {
   backButton?: boolean;
 };
 
-const AppLayout = ({ title, children }: Props) => {
+export default function AppLayout({ title, children }: Props) {
   const links = [
     { link: '/', label: 'Home' },
     { link: '/about-me', label: 'About Me' },
@@ -31,6 +31,4 @@ const AppLayout = ({ title, children }: Props) => {
       </AppShell>
     </>
   );
-};
-
-export default AppLayout;
+}

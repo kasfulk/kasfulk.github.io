@@ -89,7 +89,7 @@ interface AppHeaderProps {
   links: { link: string; label: string }[];
 }
 
-export function AppHeader({ links }: AppHeaderProps) {
+export default function AppHeader({ links }: AppHeaderProps) {
   const [opened, { toggle }] = useDisclosure(false);
   const { route } = useRouter;
   const { classes, cx } = useStyles();
