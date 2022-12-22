@@ -26,8 +26,14 @@ export default function App({ Component, pageProps }: AppProps) {
                 name="viewport"
                 content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
               />
-              <meta name="description" content="Description" />
-              <meta name="keywords" content="Keywords" />
+              <meta
+                name="description"
+                content="I have worked as a software developer with 6 years of experience. And 12 years of information technology experience. I have liked information technology since 2007—more. Programming languages that I have learned such as Javascript, PHP, and Python. I have also handled several DBMS such as Postgresql, MySQL, Oracle DB, SQLite, and MongoDB. As a developer, I have built some applications with a framework, such as Node.js with Express, Nest.js, Next.js, React.js, Laravel. As a full-stack developer, As a developer, I have dominant abilities in backend development. I have been using Linux for more than 10 years. And understand the concept of computer networks."
+              />
+              <meta
+                name="keywords"
+                content="Fullstack Developer, React.js, Vue.js, Node.js, Golang, Nest.js, Python"
+              />
 
               <link rel="manifest" href="/manifest.json" />
               <link
