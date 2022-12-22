@@ -20,7 +20,6 @@ export default function App({ Component, pageProps }: AppProps) {
             />
             <meta name="description" content="Description" />
             <meta name="keywords" content="Keywords" />
-            <title>Todo List App</title>
 
             <link rel="manifest" href="/manifest.json" />
             <link
