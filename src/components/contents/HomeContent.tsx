@@ -30,7 +30,7 @@ const useStyles = createStyles((theme) => ({
     marginTop: 2,
   },
   iconSocialMedia: {
-    marginInline: 5,
+    marginInline: 3,
   },
 }));
 
@@ -59,10 +59,19 @@ export function HomeContent() {
       platform: 'telegram',
       link: 'https://t.me/KasfulKurniawan',
     },
+    {
+      platform: 'linkedin',
+      link: 'https://www.linkedin.com/in/kasfulkurniawan/',
+    },
   ];
 
   const socialMediaShow = socialMedia.map(({ link, platform }) => (
-    <SocialIcon className={classes.iconSocialMedia} key={platform} url={link} />
+    <SocialIcon
+      style={{ height: 25, width: 25 }}
+      className={classes.iconSocialMedia}
+      key={platform}
+      url={link}
+    />
   ));
 
   return (
@@ -87,6 +96,7 @@ export function HomeContent() {
               <Center>{socialMediaShow}</Center>
               <Button
                 leftIcon={<IconMail />}
+                onClick={() => window.open('mailto:kasful.bpp@gmail.com')}
                 fullWidth
                 mt={20}
                 size="sm"
