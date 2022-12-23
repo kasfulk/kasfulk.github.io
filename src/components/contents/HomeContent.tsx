@@ -10,8 +10,10 @@ import {
   Text,
   Paper,
   Button,
+  Center,
 } from '@mantine/core';
 import { IconMail } from '@tabler/icons';
+import { SocialIcon } from 'react-social-icons';
 
 const useStyles = createStyles((theme) => ({
   card: {
@@ -27,12 +29,41 @@ const useStyles = createStyles((theme) => ({
   iconEmail: {
     marginTop: 2,
   },
+  iconSocialMedia: {
+    marginInline: 5,
+  },
 }));
+
+interface SocialMedia {
+  platform: string;
+  link: string;
+}
 
 export function HomeContent() {
   const { classes } = useStyles();
   const { readme, loading, error } = useReadme();
-  console.log(readme);
+  const socialMedia: SocialMedia[] = [
+    {
+      platform: 'facebook',
+      link: 'https://facebook.com/kasfulk',
+    },
+    {
+      platform: 'instagram',
+      link: 'https://instagram.com/kasfulkurniawan',
+    },
+    {
+      platform: 'twitter',
+      link: 'https://twitter.com/kasfulkurniawan',
+    },
+    {
+      platform: 'telegram',
+      link: 'https://t.me/KasfulKurniawan',
+    },
+  ];
+
+  const socialMediaShow = socialMedia.map(({ link, platform }) => (
+    <SocialIcon className={classes.iconSocialMedia} key={platform} url={link} />
+  ));
 
   return (
     <>
@@ -49,10 +80,11 @@ export function HomeContent() {
               <Text align="center" size="lg" weight={800} mt="md">
                 Kasjful Kurniawan
               </Text>
-              <Text align="center" size="sm">
+              <Text align="center" size="sm" mb={20}>
                 Fullstack Developer
               </Text>
 
+              <Center>{socialMediaShow}</Center>
               <Button
                 leftIcon={<IconMail />}
                 fullWidth
