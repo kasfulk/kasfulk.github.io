@@ -8,13 +8,10 @@ import {
   ActionIcon,
   Container,
   Burger,
+  Drawer,
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import {
-  IconBrandTwitter,
-  IconBrandYoutube,
-  IconBrandInstagram,
-} from '@tabler/icons';
+import { IconBrandGithub } from '@tabler/icons';
 
 const useRouter = Router;
 
@@ -115,18 +112,26 @@ export default function AppHeader({ links }: AppHeaderProps) {
           size="sm"
           className={classes.burger}
         />
+        <Drawer
+          opened={opened}
+          onClose={toggle}
+          title="List Menu"
+          padding="xl"
+          size="xl"
+        >
+          {items}
+        </Drawer>
         <Group className={classes.links} spacing={5}>
           {items}
         </Group>
         <Group spacing={0} className={classes.social} position="right" noWrap>
-          <ActionIcon size="lg">
-            <IconBrandTwitter size={18} stroke={1.5} />
-          </ActionIcon>
-          <ActionIcon size="lg">
-            <IconBrandYoutube size={18} stroke={1.5} />
-          </ActionIcon>
-          <ActionIcon size="lg">
-            <IconBrandInstagram size={18} stroke={1.5} />
+          <ActionIcon
+            onClick={() => {
+              window.open('https://github.com/kasfulk');
+            }}
+            size="lg"
+          >
+            <IconBrandGithub size={18} stroke={2} color="black" />
           </ActionIcon>
         </Group>
       </Container>
