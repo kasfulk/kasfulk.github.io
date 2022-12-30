@@ -11,6 +11,7 @@ import {
   Paper,
   Button,
   Center,
+  Container,
 } from '@mantine/core';
 import { IconMail } from '@tabler/icons';
 import { SocialIcon } from 'react-social-icons';
@@ -108,7 +109,11 @@ export function HomeContent() {
           </Grid.Col>
           <Grid.Col sm={12} lg={9}>
             {loading || (error && <Loader />)}
-            {!loading && <ReactMarkdown>{readme as string}</ReactMarkdown>}
+            {!loading && (
+              <Container>
+                <ReactMarkdown>{readme as string}</ReactMarkdown>
+              </Container>
+            )}
           </Grid.Col>
         </Grid>
       </Card>
