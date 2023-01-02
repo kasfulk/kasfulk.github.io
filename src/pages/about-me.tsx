@@ -5,7 +5,7 @@ import AppLayout from '@/components/layout/AppLayout';
 const AboutMe: NextPage = () => {
   return (
     <AppLayout title="About Me">
-      <h1>About Me</h1>
+      <h1>About Me!</h1>
     </AppLayout>
   );
 };
